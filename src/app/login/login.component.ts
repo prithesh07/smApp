@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../Service/login.service';
-import { Md5 } from 'ts-md5'
+import { Md5 } from 'ts-md5';
+import { Router } from '@angular/router';
+import { TrackerService } from '../Service/tracker.service';
 
 
 @Component({
@@ -9,26 +11,33 @@ import { Md5 } from 'ts-md5'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
   user: any;
-  constructor(private ser: LoginService) { }
+
+  constructor(private ser: LoginService,private router:Router,private tracker:TrackerService) { }
 
   ngOnInit(): void {
   }
-  onSubmit(data: any) {
+
+
+  onSubmit(data: any) 
+  {
     console.log(data.userName);
     let passHash = this.hash(data.pwd);
-    this.ser.getUser(data.userName).subscribe(e => {
+    this.ser.getUser(data.userName).subscribe(e =>
+       {
           this.user = e;
-          if (this.user.pwd == passHash) {            
+          if (this.user.pwd == passHash) 
+          {            
             console.log(e);
-            alert("Login Successful")
+            this.tracker.dataName.next(data.userName);
+            this.router.navigate(['/profile']);
           }
-          else {
+          else 
+          {
             alert("Wrong Credentials")
           }
-        }, () => alert("User ID Not Found"))
-      }
+        }, () => alert("Wrong Credentials"))
+  }
 
   hash(data: any) {
     const md5 = new Md5();

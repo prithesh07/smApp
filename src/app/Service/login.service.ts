@@ -18,4 +18,6 @@ export class LoginService {
   postUser(user:any){
     return this.http.post(this.url,user);
   }
+    
+
 }

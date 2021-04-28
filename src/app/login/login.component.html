@@ -32,10 +32,10 @@
                     </div>
 
                     <div class="container">
-                        <label for="uname"><b>User Name</b></label>
+                        <label for="userName"><b>User Name</b></label>
                         <input type="text" placeholder="Enter Username" name="userName" required ngModel /><br />
 
-                        <label for="psw"><b>Password</b></label>
+                        <label for="pwd"><b>Password</b></label>
                         <input type="password" placeholder="Enter Password" name="pwd" required ngModel>
 
                         <button (click)="onSubmit(Loginform.value)">Login</button>
@@ -46,7 +46,7 @@
         </div>
 
         <div class="container" style="background-color:#f1f1f1;border-radius: 25px;">
-            <span class="psw">Don't have an account? <a href="#">Sign Up</a></span>
+            <span class="psw">Don't have an account? <a routerLink="/signUp">Sign Up</a></span>
         </div>
         </form>
 
