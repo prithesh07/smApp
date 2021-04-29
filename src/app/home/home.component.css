@@ -13,7 +13,8 @@
       width:310px ;
       background-color: #282a34;
   }
-  .right{    
+  .right{     
+      overflow: auto;
       height:1800px;
       width:850px ;
       background-color: #3C3f51;
@@ -23,7 +24,7 @@
   
   .leftHPic{
       margin-left: 20px;
-      margin-top: 20px;
+      margin-top: 40px;
       height:65px;
       width: 65px;
       background: url('https://air-marketing-assets.imgix.net/blog/logo-db/flash-logo/flash-logo-png-1.png?auto=format&fit=max&ixlib=react-9.0.2&h=270&w=576') #282a34;
@@ -35,7 +36,7 @@
       color: white;
       height: 65px;
       width: 200px;
-      margin-top:30px;
+      margin-top:47px;
       padding-left: 10px;
   }
   .leftDP{
@@ -67,7 +68,7 @@
   }
   
   .fp{
-      font-size: 25px;
+      font-size: 22px;
       margin-top: 30px;
       width:100px;
       height: 60px;
@@ -82,14 +83,22 @@
   }
   .op{
       font-family: 'Inconsolata', monospace;
-      font-size: 27px;    
+      font-size: 19px;    
       height:30px;
       width: 300px;
       text-align: left;
-      padding-left: 75px;
+      padding-left: 90px;
       padding-top: 50px;
   }
   
+  .card:hover{
+    box-shadow: 0 0 35px 35px rgba(0, 0, 0, .5);
+    width: 80%;
+    height: 95%;
+    
+  
+
+  }
   
   
   
@@ -105,6 +114,9 @@
   
   }
   .search-ip{
+      color: white;
+      font-size: 20px;
+      text-align: center;
       margin-left: 80px;
       margin-top: 30px;
       width: 270px;
@@ -123,18 +135,19 @@
       width: 180px;
       height: 80px;
       color: white;
-      background-image: src('');
+      
   }
   
   .search-btn{
-      margin-top: 30px;
-      border-radius: 10px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      border: 1px solid #2f313bc4;
-      height: 40px;
-      width: 150px;
+    margin-top: 30px;
+    border-radius: 10px;
+    background: url('srch.jpg') #282a34;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: 1px solid #2f313bc4;
+    height: 40px;
+    width: 150px;
   }
   .add-post-txt{
       color: white;
@@ -142,7 +155,7 @@
   }
   
   .rempty1{
-      height:40px;
+      height:80px;
       width: 1200px;
   }
   
@@ -246,11 +259,11 @@
     } 
     
     .card {
-      width: 80%;
-      height: 100%;
+      width: 75%;
+      height: 90%;
       background: #242C39;
       box-shadow: 0 0 12px 2px rgba(0, 0, 0, .5);
-      margin-bottom: 45px;
+      margin-bottom: 80px;
       border-radius: 10px;
       font-size: 14px;
       margin-left: 80px;

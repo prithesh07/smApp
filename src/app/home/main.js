@@ -55,4 +55,8 @@ anime({
     opacity: [0, 1],
     delay: (el, i) => 700 + 300 * i
   })
+
+  function func(){
+    alert("hey")
+  }
   

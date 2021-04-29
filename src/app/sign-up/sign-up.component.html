@@ -21,28 +21,28 @@
                 <div id="id01" class="modal"></div>
                 <span onclick="document.getElementById('id01').style.display='none'" class="close"
                     title="Close Modal">&times;</span>
-                <form class="modal-content" action="/action_page.php"  #signForm="ngForm">
+                <form [formGroup]="signForm" class="modal-content" action="/action_page.php"  >
                     <div class="container">
                         <h1>Sign Up</h1>
                         <hr>
                         <label for="Name"><b>Name</b></label>
-                        <input type="text" placeholder="Enter Full Name" name="name" required ngModel>
+                        <input type="text" placeholder="Enter Full Name" name="name" formControlName="name" required >
 
                         <label for="Username"><b>Username</b></label>
-                        <input type="text" placeholder="Choose Username" name="userName" required ngModel>
+                        <input type="text" placeholder="Choose Username" name="userName" formControlName="userName" required >
 
                         <label for="Dob"><b>Date of Birth</b></label>
-                        <input type="date" placeholder="Choose DOB" name="dob" required ngModel><br>
+                        <input type="date" placeholder="Choose DOB" name="dob" formControlName="dob" required ><br>
                         <label for="mailID"><b>Email</b></label>
-                        <input type='email' name='mailID' placeholder='abc@xmail.xom' required ngModel>
-                        <label for="BIO"><b>Bio</b></label>
-                        <input type='text' name='bio' placeholder='BIO' required ngModel>
+                        <input type='email' name='mailID' placeholder='abc@xmail.xom' formControlName="mailID" required >
                         <label for="psw"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="pwd" required ngModel>
-
+                        <input type="password" placeholder="Enter Password" name="pwd" formControlName="pwd" required>
+                        <!-- <span style="color: red;" *ngIf="signForm.controls.pwd.errors?.required">password required</span>
+                        <span style="color: red;" *ngIf="signForm.controls.pwd.errors?.pwdvalidator">Password must be at least 8 characters</span><br/>
+                         -->
                         <label for="pwd-repeat"><b>Confirm Password</b></label>
-                        <input type="password" placeholder="Confirm Password" name="pwdrepeat" required ngModel>
-
+                        <input type="password" placeholder="Confirm Password" name="pwdrepeat" formControlName="pwdrepeat" required >
+                        <p style="color:red;">{{msg}}</p>
                         <label>
                             <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
                             Remember me
@@ -53,7 +53,7 @@
 
                         <div class="clearfix">
 
-                            <button (click)="onSubmit(signForm.value)" type="submit" class="signupbtn">Sign Up</button>
+                            <button (click)="onSubmit(signForm.value)" type="submit" class="signupbtn" [disabled]="signForm.invalid">Sign Up</button>
                         </div>
                     </div>
                 </form>

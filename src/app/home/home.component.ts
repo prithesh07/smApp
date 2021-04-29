@@ -11,12 +11,17 @@ import { TrackerService } from '../Service/tracker.service';
 export class HomeComponent implements OnInit {
   userName: any;
   user: any
+  curName:any;
+  curId:any;
   follower:any;
   followerCount:any;
   following:any;
   followingCount:any;
-  curName:any;
-  curId:any;
+  post:any;
+  postCount:any;
+  photo:any;
+  caption:any;  
+ 
   
   constructor(private ser: LoginService, private tracker: TrackerService) {
     this.tracker.dataName.subscribe(name => 
@@ -37,7 +42,14 @@ export class HomeComponent implements OnInit {
               {
                 this.following=e;
                 this.followingCount=this.following.length;      
-              })  
+              }) 
+            this.ser.getPosts(this.userName).subscribe(e=>
+              {
+                this.post=e;
+                this.postCount=this.post.length;
+              })   
+
+            
           });
         
       });  

@@ -182,7 +182,7 @@ body {
   }
   
   button {
-    background-image: url(../Images/srch.JPG);
+    background-image: url('srch.JPG');
     color: white;
     padding: 14px 20px;
     margin: 8px 0;

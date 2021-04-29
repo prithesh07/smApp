@@ -19,12 +19,18 @@ export class LoginService {
   }
 
   getFollower(userID:any){
-    return this.http.get(this.url1+'userFollowers/'+userID)
+    return this.http.get(this.url1+'userFollowersCount/'+userID)
   }
 
   getFollowing(userID:any){
-    return this.http.get(this.url1+'userFollowersFollowing/'+userID)
+    return this.http.get(this.url1+'userFollowingCount/'+userID)
   }
+
+  getPosts(userId:any){
+    return this.http.get(this.url1+'userPostsCount/'+userId)
+  }
+
+
     
 
 }
