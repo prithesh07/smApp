@@ -8,17 +8,37 @@ body {
     float:left;
 
 }
+
+input{
+  margin-top: 30px;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+.msg{
+  font-size: 15px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.feeds{
+  text-align: center;
+  
+}
+
+.forAlign{
+  text-align: center;
+}
 .main{
     display:inline;
     float:left;   
 }
 .left{
-    height: 1800px;
+    height: 750px;
     width:310px ;
     /* background-color: #282a34; */
 }
 .right{    
-    height:1800px;
+    height:750px;
     width:850px ;
     background-color: #3C3f51;
     border-radius: 30px;
@@ -99,7 +119,7 @@ body {
 
 
 .right-top-pane{
-    height:80px;
+    height: 25px;
     width: 1200px;
 
 }
@@ -166,6 +186,7 @@ body {
 
 
 form {
+  margin-top: 55px;
   border: 3px solid #f1f1f1;
   border-radius: 20px 20px 20px 20px;
   width: 360px;
@@ -182,8 +203,11 @@ form {
 }
 
 button {
-  background-image: url('srch.JPG');
+  background-image: url('https://facebookbrand.com/wp-content/uploads/2019/10/Banner-IG.png?w=1048&h=600');
+  background-size: cover;
   color: white;
+  color: black;
+  font-size: 18px;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;

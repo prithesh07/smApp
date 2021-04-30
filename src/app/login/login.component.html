@@ -18,8 +18,6 @@
         </div>
         <div class="main feeds">
             <section class="newsfeed">
-                <h2> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Login</h2>
 
                 <form action="/action_page.php" method="post" #Loginform="ngForm">
                     <div class="imgcontainer">
@@ -32,22 +30,23 @@
                     </div>
 
                     <div class="container">
-                        <label for="userName"><b>User Name</b></label>
-                        <input type="text" placeholder="Enter Username" name="userName" required ngModel /><br />
-
-                        <label for="pwd"><b>Password</b></label>
+                        <br />
+                        <input type="text" placeholder="Enter Username" name="userName" required ngModel />
+                        <br />
+                        <br />                        
                         <input type="password" placeholder="Enter Password" name="pwd" required ngModel>
-
+                        <br />
+                        <br />
                         <button (click)="onSubmit(Loginform.value)">Login</button>
-                <label>
-
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
+                        <br/><br />
+                        <span class="psw">Don't have an account? <a routerLink="/signUp" style="color:red">Sign Up</a></span>
+               
         </div>
 
-        <div class="container" style="background-color:#f1f1f1;border-radius: 25px;">
-            <span class="psw">Don't have an account? <a routerLink="/signUp">Sign Up</a></span>
-        </div>
+        
+            
+        
+        <br><br>
         </form>
 
 

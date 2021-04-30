@@ -1,3 +1,4 @@
+import { rendererTypeName } from '@angular/compiler';
 import { conditionallyCreateMapObjectLiteral } from '@angular/compiler/src/render3/view/util';
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../Service/login.service';
@@ -21,6 +22,7 @@ export class HomeComponent implements OnInit {
   postCount:any;
   photo:any;
   caption:any;  
+  userList:any;
  
   
   constructor(private ser: LoginService, private tracker: TrackerService) {
@@ -48,6 +50,13 @@ export class HomeComponent implements OnInit {
                 this.post=e;
                 this.postCount=this.post.length;
               })   
+              this.ser.getUsers().subscribe(e=>
+                {
+                  this.userList=e;     
+                  console.log(this.userList);    
+                          
+                  
+                })
 
             
           });
@@ -57,7 +66,15 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  saveCode(data:any){
+    alert("hey")
+  }
+  
 
+  fun(){
+    alert("hey")
+  }
+ 
 
 
 }

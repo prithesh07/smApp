@@ -13,12 +13,12 @@ body {
       float:left;   
   }
   .left{
-      height: 1800px;
+      height: 750px;
       width:310px ;
       /* background-color: #282a34; */
   }
   .right{    
-      height:1800px;
+      height:755px;
       width:850px ;
       background-color: #3C3f51;
       border-radius: 30px;
@@ -99,7 +99,7 @@ body {
   
   
   .right-top-pane{
-      height:80px;
+      height:125px;
       width: 1200px;
   
   }
@@ -172,23 +172,30 @@ body {
     margin-left: 238px;}
   
   .container input[type=text], input[type=password],input[type=date] {
-    width: 100%;
+    margin-left:11px;
+    margin-bottom:15px;
+    width:300px;
     padding: 12px 20px;
-    margin: 8px 0;
     display: inline-block;
     border-radius: 10px;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    font-size: 13px;
+    letter-spacing: 2px;
   }
   
   button {
-    background-image: url('srch.JPG');
+    border-radius: 10px;
+    margin-left:11px;
+    margin-bottom:15px;
+    font-size: 18px;
+    width:300px;
+    background-image: url('https://facebookbrand.com/wp-content/uploads/2019/10/Banner-IG.png?w=1048&h=600');
+    background-size: cover;
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    padding: 11px 20px;
     border: none;
     cursor: pointer;
-    width: 100%;
   }
   
   button:hover {
@@ -203,7 +210,7 @@ body {
   
   .imgcontainer {
     text-align: center;
-    margin: 24px 0 12px 0;
+    margin-top:30px;
   }
   
   img.avatar {
@@ -222,6 +229,7 @@ body {
     padding-top: 16px;
     margin-top: -24px;
     margin-right: 60px;
+    color: white;
   }
   
   @media screen and (max-width: 300px) {

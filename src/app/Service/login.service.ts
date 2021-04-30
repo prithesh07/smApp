@@ -13,6 +13,9 @@ export class LoginService {
   getUser(userID:any){
     return this.http.get(this.url1+'appUsers/'+userID)    
   }
+  getUsers(){
+    return this.http.get('http://localhost:58702/Api/appUsers');    
+  }
 
   postUser(user:any){
     return this.http.post(this.url1+'appUsers',user);
