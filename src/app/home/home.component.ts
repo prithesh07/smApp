@@ -1,6 +1,7 @@
 import { rendererTypeName } from '@angular/compiler';
 import { conditionallyCreateMapObjectLiteral } from '@angular/compiler/src/render3/view/util';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from '../Service/login.service';
 import { TrackerService } from '../Service/tracker.service';
 
@@ -25,7 +26,7 @@ export class HomeComponent implements OnInit {
   userList:any;
  
   
-  constructor(private ser: LoginService, private tracker: TrackerService) {
+  constructor(private ser: LoginService, private tracker: TrackerService,private router:Router) {
     this.tracker.dataName.subscribe(name => 
       {
         this.userName = name;
@@ -70,9 +71,22 @@ export class HomeComponent implements OnInit {
     alert("hey")
   }
   
+  logOut(){
+    this.tracker.dataName.subscribe(e=>{
+      this.tracker.dataName.next('');
+      this.router.navigate(['/login']);
 
-  fun(){
-    alert("hey")
+    })   
+  }
+
+  view(){
+    this.router.navigate(['/myProfile']);
+  }
+  edit(){
+    this.router.navigate(['/editProfile']);
+  }
+  addPhoto(){
+    this.router.navigate(['/addPic']);
   }
  
 

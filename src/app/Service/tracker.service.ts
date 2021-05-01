@@ -6,7 +6,9 @@ import {BehaviorSubject} from 'rxjs'
 })
 export class TrackerService {
   
-  public dataName:BehaviorSubject<string> = new BehaviorSubject<string>("Prithesh007");
+  public dataName:BehaviorSubject<string> = new BehaviorSubject<string>('Prithesh007');
 
-  constructor() { }
+  constructor() {
+    console.log("called")
+   }
 }

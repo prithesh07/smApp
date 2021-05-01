@@ -28,8 +28,9 @@ export class LoginComponent implements OnInit {
           this.user = e;
           if (this.user.pwd == passHash) 
           {            
-            console.log(e);
+            
             this.tracker.dataName.next(data.userName);
+            console.log(e);
             this.router.navigate(['/profile']);
           }
           else 

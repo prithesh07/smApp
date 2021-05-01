@@ -1,33 +1,28 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { TrackerService } from '../Service/tracker.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  constructor(private router:Router)
+  user:any;
+  constructor(private router:Router,private tracker:TrackerService)
   {
 
   }
   canActivate(){
-    return true;
-    /*console.log('auth started')
-    
-    if(sessionStorage.getItem('user'))
+    this.tracker.dataName.subscribe(e=> this.user=e)
+    if(this.user=='')
     {
-      console.log("auth success")
-      return true;
-    }
-    else 
-    {
-      alert("Access Denied...redirecting to login page")
+      alert('Access Denied.. Redirecting to Login Page...')
       this.router.navigate(['/login']);
-      console.log("auth failed")
       return false;
-    }*/
-    
+    }
 
+    return true;
+    
   }
   
 }

@@ -9,13 +9,52 @@
       float:left;   
   }
   .left{
-      height: 1800px;
+      position: fixed;
+      height: auto;
       width:310px ;
       background-color: #282a34;
   }
-  .right{     
-      overflow: auto;
-      height:1800px;
+
+  .fs1{
+    margin-bottom: 20px;
+    width: 100%;
+    font-family: 'Inconsolata', monospace;
+    font-size: 22px;
+    text-align: center;
+    margin-left: -19px;
+  }
+  .fs2{
+    margin-bottom:20px;
+    width: 100%;
+    font-family: 'Inconsolata', monospace;
+    font-size: 22px;
+    text-align: center;
+    margin-left: -23px;
+  }
+  .fs3{
+    margin-bottom: 20px;
+    width: 100%;
+    font-family: 'Inconsolata', monospace;
+    font-size: 22px;
+    text-align: center;
+    margin-left: -26px;
+  }
+  .fs4{
+    margin-bottom: 20px;
+    width: 100%;
+    font-family: 'Inconsolata', monospace;
+    font-size: 22px;
+    text-align: center;
+    margin-left: -16px;
+  }
+
+  .blank1{
+    width: 100%;
+    height: 45px;
+  }
+  .right{    
+    margin-left: 340px; 
+      height:auto;
       width:850px ;
       background-color: #3C3f51;
       border-radius: 30px;
@@ -53,6 +92,19 @@
   
   .leftStats{
     margin-top: 10px;
+  }
+
+  a{
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+  .search-btn:hover{
+    text-transform:uppercase;
+    box-shadow: 0 0 10px 10px rgb(0 0 0 / 50%);
+    width:150px;
+    height: 50px;
+    margin-top:45px;
   }
   
   .leftName{

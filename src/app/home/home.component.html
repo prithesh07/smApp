@@ -32,32 +32,31 @@
             </div>
         </div>
         <div class="leftFunc">
-            <div class="main op leftName fs2">
-               
-                    <i class="bi bi-grid"></i>                   
-                    <a routerLink="">Feed</a>
-                  
-                  
+            <div class="main blank1">               
+                       
             </div>
-            <div class="main op leftName fs3">
-               
-                    <i class="bi bi-person-circle"></i>
-                    <a routerLink="/myprof">View</a>
+            <div class="main fs1">   
+                <a (click)="logOut()">           
+                <i class="bi bi-grid"></i>                   
+                Feed</a>    
             </div>
-            <div class="main op leftName fs4">
-                
-                  <i class="bi bi-pencil-fill"></i>
-                  <a routerLink="">Edit </a>
+            <div class="main fs2"> 
+                <a (click)="view()">
+                <i class="bi bi-person-circle"></i>
+                View</a>
             </div>
-        </div>
-        <div class="leftExit">
-            <div class="main op leftName fs5" (click)="fun();" >
-                
-                  <i class="bi bi-door-open-fill"></i>
-                  <a routerLink="/Login">Log Out</a>
+            <div class="main fs3"> 
+                <a (click)="edit()">
+                <i class="bi bi-pencil-fill"></i>
+                Edit</a>
             </div>
-
-        </div>
+            <div class="main fs4">
+                <a (click)="logOut()">          
+                <i class="bi bi-door-open-fill"></i>
+                Logout</a> 
+            </div>
+        </div>    
+       
     </div>
     <div class="right main">
         <div class="right-top-pane main">
@@ -74,7 +73,7 @@
 
             </div>
             <div class="add-post main">
-                <button class="search-btn" value="Search">
+                <button class="search-btn"  (click)="addPhoto();" value="Search">
                     <span class="add-post-txt">
                       <i class="bi bi-plus-circle"></i> &nbsp; &nbsp;Add Photo
                     </span>

@@ -56,9 +56,10 @@ export class SignUpComponent implements OnInit {
   
   onSubmit(data: any) {
     if(!this.status1 && !this.status2)
-    {    
-      let passHash = this.hash(data.pwd);
+    {   
+      
       var today = new Date();
+      let passHash = this.hash(data.pwd);
       this.user = { name: data.name, userName: data.userName, pwd:passHash, dob:data.dob, mailID:data.mailID,profilePic:'https://bestprofilepictures.com/wp-content/uploads/2020/07/Awesome-Profile-Picture-For-Facebook.jpg',bio:data.bio,lastUpdate:today}
       this.ser.postUser(this.user).subscribe((e: any) => {console.log("Post started");console.log(this.user)}, (e: any) => {console.log(e);alert("Try Again")}, () => {console.log("Post Successful");alert("Sign Up Successful !!... Redirecting to login page");this.router.navigate(['/login']);  })
       
