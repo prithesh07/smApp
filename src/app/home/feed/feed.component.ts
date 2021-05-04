@@ -116,9 +116,18 @@ export class FeedComponent implements OnInit {
   }
 
   con(val){
+    
      var a= parseInt(val);
      a=a+this.a1;
      return a;
+  }
+
+  navi(data:any){
+      this.tracker.dataName2.next(data);
+      this.router.navigate(['/profile/appProfile']);
+      
+
+
   }
  
 

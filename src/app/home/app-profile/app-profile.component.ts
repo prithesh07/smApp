@@ -12,6 +12,7 @@ import { TrackerService } from 'src/app/Service/tracker.service';
 export class AppProfileComponent implements OnInit {
   value2:any;
   flag=false;
+  flag2:true;
   track:any;
   userId:any;
   feedPost1:any;
@@ -136,7 +137,7 @@ export class AppProfileComponent implements OnInit {
      });
     }
 
-    like(id:any){
+    like(id:any,comment:any){
     
      var obj={
        "postId":"204",
@@ -152,13 +153,15 @@ export class AppProfileComponent implements OnInit {
         
         console.log("Liked photo");
         this.reloadComponent();
-        
-      
-        
     
        })
 
     }  
+    con(data:any,data3:any){
+      let data2=parseInt(data);
+      data2++;
+      document.getElementById(data3).innerHTML = ""+data2;
+    }
     
   
   

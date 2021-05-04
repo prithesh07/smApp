@@ -59,8 +59,9 @@
                         <img src="{{val.contentIMG}}" (click)="fun(val.comment,val.contentIMG,val.caption);"  id="myImg"  class="gallery-image"
                         alt="nil" style="margin-bottom: 15px;">
                         <br>
-                    <span style="padding-left: 100px;">Likes&nbsp;&nbsp;:&nbsp;&nbsp;
+                    <span style="padding-left: 20px;">Likes&nbsp;&nbsp;:&nbsp;&nbsp;
                     <i  class="bi bi-heart-fill">&nbsp;&nbsp;&nbsp;&nbsp;{{val.comment}}</i>
+                    <span (click)="delPost(val.postId);"><i id="delIcon" class="fa fa-trash-o" style="font-size:24px;padding-left:200px"></i></span>
                     <!-- <i *ngIf="!flag1" style="color:red" class="bi bi-heart-fill">&nbsp;&nbsp;&nbsp;&nbsp;{{con(val.comment)}}</i>-->
                     </span> 
                         <!-- <div  class="gallery-item-info">

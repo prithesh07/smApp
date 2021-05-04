@@ -9,8 +9,6 @@
                     <div class="profile-image">
 
                         <img src="{{img}}"  alt="" style="width: 225px; height: 225px;">
-                          
-                            
 
                     </div>
                     
@@ -18,7 +16,7 @@
                     <div class="profile-user-settings">
 
                         <h1 class="profile-user-name"> {{userId}}</h1>
-                        <button *ngIf="followStatus"  (click)="unFollowMethod()" routerLinkActive="active" class="btn profile-edit-btn" style="width: auto;font-size:25px;margin-left: 45px;margin-right: 75px;">Following &nbsp;<i
+                        <button *ngIf="followStatus"  (click)="unFollowMethod()" routerLinkActive="active" class="btn profile-edit-btn" style="width: auto;font-size:25px;margin-left: 25px;margin-right: 75px;">Following &nbsp;<i
                             class="bi bi-person-check-fill"></i></button>
                             <button *ngIf="!followStatus"  (click)="followMethod()"routerLinkActive="active" class="btn profile-edit-btn" style="width: auto;font-size:25px;margin-left: 45px;    margin-right: 93px;">Follow &nbsp;<i
                                 class="bi bi-person-check-fill"></i></button>   
@@ -27,7 +25,7 @@
                         <ul>
                             <li><span class="profile-stat-count">{{postCount}}</span> posts</li>
                             <li><span class="profile-stat-count">{{followerCount}}</span> followers</li>
-                            <li><span class="profile-stat-count">{{followingCount}}</span> following </li>
+                            <li style="margin-right: 101px;"><span class="profile-stat-count" >{{followingCount}}</span> following </li>
                         </ul>
 
                     </div>
@@ -60,8 +58,10 @@
                         <img src="{{val.contentIMG}}" (click)="fun(val.comment,val.contentIMG,val.caption);" id="myImg"  class="gallery-image"
                             alt="nil" style="margin-bottom: 15px;">
                             <br>
-                        <span (click)="like(val.postId);" >Likes&nbsp;&nbsp;:&nbsp;&nbsp;
+                        <span class="effect" (click)="like(val.postId,val.comment);" >Likes&nbsp;&nbsp;:&nbsp;&nbsp;
                         <i id="lykd" class="bi bi-heart-fill">&nbsp;&nbsp;&nbsp;&nbsp;{{val.comment}}</i>
+                        
+                        
                         </span>
 
 

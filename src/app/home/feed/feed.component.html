@@ -1,7 +1,6 @@
 <app-topbar></app-topbar>
 <div class="main feeds">
     <section class="newsfeed">
-        
       <div *ngFor="let value of feedPost1">
         <div *ngFor="let val of value" class="card">
           <div class="picture" style="background-image: url('{{val.contentIMG}}');"></div>
@@ -9,7 +8,7 @@
             <div class="header">
               <div class="profile-pic"></div>
               <div class="detail">
-                <p class="name">{{val.userName}}</p>
+                <p class="name" (click)="navi(val.userName);">{{val.userName}}</p>
                 <p class="posted">{{val.postTime | date}}</p>
               </div>
             </div>
@@ -25,7 +24,7 @@
               <div class="like" (click)="like(val.postId);">
                 <i id="{{val.postId}}" class="bi bi-heart-fill"></i>
                 <span *ngIf="flag1">{{val.comment}}</span>
-                <span *ngIf="!flag1">{{ con(val.comment)}}</span>
+                <span *ngIf="!flag1" >{{ con(val.comment)}}</span>
               </div>
               <div class="comment">
                 
@@ -45,7 +44,7 @@
               <div class="profile-pic"></div>
               <div class="detail">
                 <p class="name">Flash</p>
-                <p class="posted">2 hours ago</p>
+                <p class="posted">10 days ago</p>
               </div>
             </div>
             <div class="desc">

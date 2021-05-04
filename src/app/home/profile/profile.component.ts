@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from 'src/app/Service/login.service';
 import { TrackerService } from 'src/app/Service/tracker.service';
 
@@ -26,7 +27,7 @@ export class ProfileComponent implements OnInit {
   value1:any;
   a1=0;
 
-  constructor(private ser:LoginService,private tracker:TrackerService) { 
+  constructor(private ser:LoginService,private tracker:TrackerService,private router:Router) { 
    
     this.tracker.dataName.subscribe(e=>{
       this.userId=e;
@@ -84,6 +85,32 @@ export class ProfileComponent implements OnInit {
     var a= parseInt(val);
     a=a+this.a1;
     return a;
+ }
+ delPost(postId:any){
+  var retVal = confirm("Are you sure you want to delete the selected post ?");
+  if( retVal == true ) {
+    this.ser.delPostResponse(postId).subscribe(e=>{},
+      (error)=>{console.log('del post response error',error)},
+      ()=>{
+        console.log("post response deleted");
+        this.ser.delPost(postId).subscribe(e=>{},
+          (error)=>{console.log('del post error',error)},
+          ()=>{console.log("post successfully deleted");
+        this.reloadComponent();});
+        
+      });
+  } 
+  else {
+     
+  }
+   
+
+ }
+ reloadComponent() {
+  let currentUrl = this.router.url;
+  this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
+      this.router.navigate([currentUrl]);
+  });
  }
 
 

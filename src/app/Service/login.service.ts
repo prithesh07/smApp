@@ -70,6 +70,15 @@ export class LoginService {
     return this.http.put(this.url1+'postResponses/'+id,data)
   }
 
+  delPost(id:any){
+    return this.http.delete(this.url1+'delPosts/'+id);
+
+  }
+  delPostResponse(id:any){
+    return this.http.delete(this.url1+'delPpostResponses/'+id);
+
+  }
+
 
     
 

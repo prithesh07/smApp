@@ -55,6 +55,9 @@
 
                         <div class="clearfix">
                             <button (click)="onSubmit(signForm.value)" type="submit" class="signupbtn" [disabled]="signForm.invalid">Sign Up</button>
+                            <br><br>
+                            <span class="psw" style="color:white">Already have an account? <a routerLink="/login" style="color:red">Sign in</a></span>
+                            <br><br>
                         </div>
                     </div>
                 </form>
